@@ -17,3 +17,16 @@ body {
 .important {
   background-color: aquamarine;  
 }
+.huge {
+    font-size: large;
+    font-style: oblique;
+}
+.small {
+    font-size: large;
+    font-style: oblique;
+}
+.resize {
+    color: darkgreen;
+    cursor: pointer;
+    font-weight: bold;
+}
