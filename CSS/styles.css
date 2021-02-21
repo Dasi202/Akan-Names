@@ -8,10 +8,10 @@ body {
 .jumbotron{
     text-align: center;
     background-color: whitesmoke;
-    opacity: 0.75;
+    opacity: 0.80;
     padding-top: 30px;
     padding-bottom: 30px;
-    font-weight: 300;
+    font-weight: 400;
 } 
 .dogs {
     margin: 10px;
@@ -31,4 +31,8 @@ body {
     color: darkgreen;
     cursor: pointer;
     font-weight: bold;
+}
+.icon {
+   height: 50px; 
+   width: 50px;
 }
