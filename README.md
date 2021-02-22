@@ -14,9 +14,9 @@ Danlon Situma
 * CSS
 * Javascript
 ## Live link
-[link](<https://dasi202.github.io/Akan-Names/t information.>)
+[<https://dasi202.github.io/Akan-Names/t information.>]
 ## Contac
-[Mail to:](situmadanlon@gmail.com)
+[situmadanlon@gmail.com]
 ## License and Copyright information.
 MIT License
 Copyright (c) [2021] [Danlon Situma]
