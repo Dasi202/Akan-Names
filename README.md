@@ -1,5 +1,5 @@
 # Project name.
-Akan Nmaes
+Akan Name
 ## Project description.
  It's a web application that takes a user's birthday and calculates the day of the week they were born and then depending on their gender outputs their Akan Name. 
 ## Author's name.
@@ -14,8 +14,8 @@ Danlon Situma
 * CSS
 * Javascript
 ## Live link
-[<https://dasi202.github.io/Akan-Names/t information.>]
-## Contac
+[https://dasi202.github.io/Akan-Names/]
+## Contact Information
 [situmadanlon@gmail.com]
 ## License and Copyright information.
 MIT License
