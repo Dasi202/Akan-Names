@@ -1,12 +1,13 @@
 
 const getName=() => {
     let date=document.getElementById("birthday").value 
- 
     console.log(date)
 
     let gender=document.getElementById("gender").value
-
     console.log(gender)
+
+    let century=document.getElementsByClassName("century").value
+    console.log(century)
 
     let  dayBorn=parseInt(( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7)
     console.log(dayBorn)
