@@ -1,66 +1,41 @@
-
-const getName=() => {
-    let date=document.getElementById("birthday").value 
-    console.log(date)
-
-    let gender=document.getElementById("gender").value
-    console.log(gender)
-
-    let century=document.getElementsByClassName("century").value
-    console.log(century)
-
-    let  dayBorn=parseInt(( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7)
-    console.log(dayBorn)
-    //listing days of the week
-                           // 0        1        2          3           4        5          6       
-    const daysOfTheWeek = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
-    console.log(daysOfTheWeek[dayBorn])
-    // Akan names arrays
-    const male =["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"]
-    // validating male akan names
-    if (gender==="male"&& daysOfTheWeek === "Sunday"){
-        console.log(male[dayBorn])
-    }
-    if (gender==="male"&& daysOfTheWeek === "Monday"){
-        console.log(male[dayBorn])
-    }
-    if (gender==="male"&& daysOfTheWeek === "Tuesday"){
-        console.log(male[dayBorn])
-    }
-    if (gender==="male"&& daysOfTheWeek === "Wednesday"){
-        console.log(male[dayBorn])
-    }
-    if (gender==="male"&& daysOfTheWeek === "Thursday"){
-        console.log(male[dayBorn])
-    }
-    if (gender==="male"&& daysOfTheWeek === "Friday"){
-        console.log(male[dayBorn])
-    }
-    if (gender==="male"&& daysOfTheWeek === "Saturday"){
-        console.log(male[dayBorn])
-    }
-// validating female akan names
-    const female=["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"]
-    if (gender==="female"&& daysOfTheWeek === "Sunday"){
-        console.log(female[dayBorn])
-    }
-    if (gender==="female"&& daysOfTheWeek === "Monday"){
-        console.log(female[dayBorn])
-    }
-    if (gender==="female"&& daysOfTheWeek === "Tuesday"){
-        console.log(female[dayBorn])
-    }
-    if (gender==="female"&& daysOfTheWeek === "Wednesday"){
-        console.log(female[dayBorn])
-    }
-    if (gender==="female"&& daysOfTheWeek === "Friday"){
-        console.log(female[dayBorn])
-    }
-    if (gender==="female"&& daysOfTheWeek === "Saturday"){
-        console.log(female[dayBorn])
-    }
-    if (gender==="male"&& daysOfTheWeek === "Sunday"){
-        console.log(femlae[dayBorn])
-    }
-
-}
+var getAkanName = function(){ 
+  //initialise variables and populate them
+   var maleNames=['Kwasi','Kwadwo','Kwabena','Kwaku','Yaw','Kofi','Kwame']
+   var femaleNames = ['Akosua','Adwoa','Abenaa','Akua','Yaa','Afua','Ama']
+   var radios = document.getElementsByName('gender');
+   for (var i = 0, length = radios.length; i < length; i++) {
+     if (radios[i].checked) {
+       // do whatever you want with the checked radio
+       var gender=radios[i].value;
+       // only one radio can be logically checked, don't check the rest
+       break;
+     }
+   }
+  
+   var dateOfBirth = document.getElementById("dateOfBirth").value;
+   console.log(gender +" "+ dateOfBirth);
+ 
+   //slice to get day month century year
+   var dd = parseInt(dateOfBirth.slice(0,2));
+   var mm = parseInt(dateOfBirth.slice(3,5));
+   var cc = parseInt(dateOfBirth.slice(6,8));
+   var yy = parseInt(dateOfBirth.slice(8,10));
+ 
+   //validation
+   if (gender==='M'||gender==='F'){
+     if (mm>0 && mm<=12){
+       if(dd>0 && dd<=31){
+         dayOfWeekRHS = (((cc/4) -2*cc-1)+((5*yy/4))+((26*(mm+1)/10))+dd);
+         dayOfWeekRHSFloor = Math.floor(dayOfWeekRHS);
+         dayOfWeek = dayOfWeekRHSFloor % 7;
+         if (gender==='M'){
+           return(alert("Your male Akan name is "+ maleNames[dayOfWeek]));
+         } else {
+           return(alert("Your female Akan name is "+ femaleNames[dayOfWeek]));
+         }
+       }
+     }
+   }else{
+     return(alert("Invalid Input"));
+   }
+ }  
