@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="CSS/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
-        <link href=".CSS/styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="CSS/styles.css" rel="stylesheet">
         <title>Akan Names!</title>
     </head>
     <body>
@@ -15,27 +15,31 @@
                     <p>The Akan people of Ghana frequently name their children after the day of the week they were born and the order in which they were born. These <span class="important">"day names"</span> have further meanings concerning the soul and character of the person. Middle names have considerably more variety and can refer to their birth order, twin status, or an ancestor's middle name.</p>
                 </div>
                 <h2>To know your Akan Name,fill in the form below:</h2>
-                <form>
-                  <label for="Gender">Gender:</label> 
-                  <input type="radio" name="male" id="male">Male
-                  <input type="radio" name ="female" id="female"> Female<br><br>
-                  <label for="DOB"><div class="huge">Date of Birth</div></label><br>
-
-                  <input type="date" name="birthday" id="birthday"><br><br>
-
-                  <label for="Century"><div class="century">Choose a century</div></label>
-                  <select id="century" name="century">
-                      <option value="19th">19th </option>
-                      <option value="20th">20th</option>
-                      <option value="21st">21st</option>
-                  </select><br><br>
-                  <button type="button" onclick="getName()"><span class="resize">Submit</span></button><br><br>
+                <form id="akanForm">
+                    <div class ="form-group row">
+                        <div class="col">
+                            <label for="dateOfBirth">Date of Birth<span id="label-warning">(In DD/MM/YYYY Format e.g 15/05/2002)</span></label>
+                            <input id="dateOfBirth" type="text" class="form-control"><br>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col">
+                            <fieldset>
+                                <legend>Select Gender:</legend>
+                                <input type="radio" id="male" name="gender" value="M" checked="checked">
+                                <label for="male">Male</label><br>
+                                <input type="radio" id="female" name="gender" value="F">
+                                <label for="female">Female</label><br>
+                            </fieldset>  
+                        </div>
+                    </div>
+                    <button onclick="getAkanName()" class="btn btn-success">Get My Akan Name</button>
                 </form>
                 <footer>
                     <h3>Contact Me:</h3>
                     <div class="socials">
-                        <a href="mailto:situmadanlon@gmail"><img class="icon" src="/Images/gmailicon.png">Email</a><br>
-                        <a href="https://github.com/Dasi202"><img class="icon" src="Images/githubicon.png">Github</a>
+                        <a href="mailto:situmadanlon@gmail"><img class="icon" src="/Images/gmailicon.png" width="50px" height="50px">Email</a><br>
+                        <a href="https://github.com/Dasi202"><img class="icon" src="/Images/githubicon.png"width="50px" height="50px">Github</a>
                     </div>
                 </footer>
             </div>
